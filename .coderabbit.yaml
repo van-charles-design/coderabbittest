@@ -1,0 +1,72 @@
+# CodeRabbit configuration file
+# This configures how CodeRabbit reviews your pull requests
+
+# Review settings
+reviews:
+  # Enable automatic reviews
+  auto_review: true
+  
+  # Review focus areas
+  focus_areas:
+    - "security"
+    - "performance"
+    - "maintainability"
+    - "testing"
+    - "documentation"
+  
+  # File patterns to review
+  include_patterns:
+    - "**/*.ts"
+    - "**/*.tsx"
+    - "**/*.js"
+    - "**/*.jsx"
+    - "**/*.css"
+    - "**/*.json"
+  
+  # Files to exclude from review
+  exclude_patterns:
+    - "node_modules/**"
+    - "dist/**"
+    - "build/**"
+    - ".next/**"
+    - "coverage/**"
+    - "*.lock"
+
+# Language-specific settings
+language_settings:
+  typescript:
+    # Check for TypeScript best practices
+    strict_mode: true
+    # Suggest modern syntax
+    modern_syntax: true
+    
+  react:
+    # Check for React best practices
+    hooks_rules: true
+    # Performance optimizations
+    performance_hints: true
+    
+  css:
+    # Check for CSS best practices
+    accessibility: true
+    # Performance suggestions
+    optimization: true
+
+# Comment settings
+comments:
+  # Be constructive and helpful
+  tone: "helpful"
+  # Provide code examples when possible
+  include_examples: true
+  # Explain the reasoning behind suggestions
+  explain_reasoning: true
+
+# Integration settings
+integrations:
+  github:
+    # Auto-approve simple changes (like typos)
+    auto_approve_minor: false
+    # Request changes for critical issues
+    request_changes_critical: true
+    # Add labels to PRs
+    add_labels: true 
