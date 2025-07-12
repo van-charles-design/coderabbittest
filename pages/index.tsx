@@ -140,14 +140,26 @@ export default function Home() {
             <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
               Stay ahead of the curve with our curated collection of articles on web development, design, and technology trends.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-600 hover:bg-primary-50 font-medium py-3 px-8 rounded-lg transition-colors duration-200">
-                Start Reading
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-colors duration-200">
-                Subscribe
-              </button>
-            </div>
+                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+               <button 
+                 className="bg-white text-primary-600 hover:bg-primary-50 font-medium py-3 px-8 rounded-lg transition-colors duration-200"
+                 onClick={() => {
+                   // Missing error handling and could be improved
+                   document.getElementById('featured-posts')?.scrollIntoView()
+                 }}
+               >
+                 Start Reading
+               </button>
+               <button 
+                 className="border border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-colors duration-200"
+                 onClick={() => {
+                   // Direct DOM manipulation - not React best practice
+                   document.getElementById('newsletter')?.scrollIntoView()
+                 }}
+               >
+                 Subscribe
+               </button>
+             </div>
           </div>
         </div>
       </section>
@@ -188,8 +200,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Posts */}
-      <section className="py-16">
+             {/* Featured Posts */}
+       <section id="featured-posts" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Articles</h2>
@@ -276,8 +288,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="bg-primary-600 py-16">
+             {/* Newsletter */}
+       <section id="newsletter" className="bg-primary-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stay in the Loop
