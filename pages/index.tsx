@@ -135,7 +135,7 @@ export default function Home() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Modern Insights for
-              <span className="block text-primary-200">Developers</span>
+              <span className="block text-primary-200">Creative Developers</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
               Stay ahead of the curve with our curated collection of articles on web development, design, and technology trends.
