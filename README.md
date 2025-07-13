@@ -2,6 +2,14 @@
 
 A beautiful, responsive blog landing page built with Next.js and Tailwind CSS.
 
+## 🚀 CodeRabbit Testing
+
+This repository includes deliberately problematic code to test CodeRabbit's AI code review capabilities:
+- Security vulnerabilities (XSS, hardcoded secrets)
+- Performance issues (memory leaks, inefficient algorithms)
+- Accessibility problems (missing labels, alt text)
+- Code quality issues (unused variables, magic numbers)
+
 ## Features
 
 - 🎨 Modern, clean design with Tailwind CSS
